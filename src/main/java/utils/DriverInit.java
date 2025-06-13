@@ -18,6 +18,7 @@ public class DriverInit {
         }
         driver.manage().window().maximize();
         return driver;
+
     }
 
     public static void quitDriver() {
