@@ -24,6 +24,7 @@ public class DriverInit {
         if (driver != null) {
             driver.quit();
             driver = null;
+
         }
     }
 }
