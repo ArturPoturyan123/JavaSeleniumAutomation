@@ -7,6 +7,8 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import services.ApiService;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.*;
 
 public class ApiLoginTest  {
     
@@ -50,6 +52,10 @@ public class ApiLoginTest  {
         Response response = apiService.login(email, password);
         
         // Assertions
+        assertThat(response.getStatusCode(), is(200));
+
+
+
         Assert.assertEquals(response.getStatusCode(), 401, "Status code should be 401 for invalid credentials");
         Assert.assertFalse(apiService.isResponseSuccessful(response), "Response should not be successful");
         
