@@ -5,20 +5,24 @@ import java.io.InputStream;
 import java.util.Properties;
 
 public class ConfigReader {
-    private static final Properties properties = new Properties();
+    private static Properties props = new Properties();
 
     static {
-        try (InputStream input = ConfigReader.class.getClassLoader().getResourceAsStream("config.properties")) {
-            if (input == null) {
-                throw new RuntimeException("⚠️ config.properties not found in resources");
+        try (InputStream is = ConfigReader.class.getClassLoader().getResourceAsStream("config.properties")) {
+            if (is == null) {
+                throw new RuntimeException("config.properties not found in classpath");
             }
-            properties.load(input);
+            props.load(is);
         } catch (IOException e) {
-            throw new RuntimeException("⚠️ Failed to load config.properties", e);
+            throw new RuntimeException("Could not load config.properties", e);
         }
     }
 
     public static String get(String key) {
-        return properties.getProperty(key);
+        String systemValue = System.getProperty(key);
+        if (systemValue != null) {
+            return systemValue;
+        }
+        return props.getProperty(key);
     }
 }

@@ -10,14 +10,14 @@ import pages.LoginPage;
 
 public class LoginTest extends BaseTest {
     private LoginPage loginPage;
-    DashboardPage dashboardPage;
+    private DashboardPage dashboardPage;
 
 
     @BeforeMethod
     public void initPage() {
 
-        loginPage = new LoginPage(driver);
-        dashboardPage = new DashboardPage(driver);
+        loginPage = new LoginPage();
+        dashboardPage = new DashboardPage();
 
     }
 
