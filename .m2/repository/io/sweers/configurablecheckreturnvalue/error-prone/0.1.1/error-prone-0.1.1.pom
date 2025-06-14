@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>io.sweers.configurablecheckreturnvalue</groupId>
+  <artifactId>error-prone</artifactId>
+  <version>0.1.1</version>
+  <name>error-prone</name>
+  <description>Configurable Lint and Error-Prone checker alternatives for @CheckReturnValue</description>
+  <url>https://github.com/ZacSweers/configurable-checkreturnvalue/</url>
+  <licenses>
+    <license>
+      <name>The Apache Software License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+  <developers>
+    <developer>
+      <id>ZacSweers</id>
+      <name>Zac Sweers</name>
+    </developer>
+  </developers>
+  <scm>
+    <connection>scm:git:git://github.com/ZacSweers/configurable-checkreturnvalue.git</connection>
+    <developerConnection>scm:git:ssh://git@github.com/ZacSweers/configurable-checkreturnvalue.git</developerConnection>
+    <url>https://github.com/ZacSweers/configurable-checkreturnvalue/</url>
+  </scm>
+  <dependencies>
+    <dependency>
+      <groupId>com.google.guava</groupId>
+      <artifactId>guava</artifactId>
+      <version>27.0.1-jre</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.google.errorprone</groupId>
+      <artifactId>error_prone_test_helpers</artifactId>
+      <version>2.3.2</version>
+      <scope>test</scope>
+      <exclusions>
+        <exclusion>
+          <artifactId>junit</artifactId>
+          <groupId>junit</groupId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>com.google.truth</groupId>
+      <artifactId>truth</artifactId>
+      <version>0.42</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.13-beta-2</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.mockito</groupId>
+      <artifactId>mockito-core</artifactId>
+      <version>1.9.5</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.assertj</groupId>
+      <artifactId>assertj-core</artifactId>
+      <version>3.11.1</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+</project>
