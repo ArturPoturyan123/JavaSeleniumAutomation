@@ -16,6 +16,7 @@ public class LoginTest extends BaseTest {
     @BeforeMethod
     public void initPage() {
 
+
         loginPage = new LoginPage();
         dashboardPage = new DashboardPage();
 
