@@ -19,6 +19,7 @@ public class LoginTest extends BaseTest {
         loginPage = new LoginPage();
         dashboardPage = new DashboardPage();
 
+
     }
 
     @Test
