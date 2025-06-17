@@ -1,4 +1,6 @@
 #NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
-#Sun Jun 15 00:58:44 GMT+04:00 2025
+#Mon Jun 16 17:42:55 AMT 2025
+commons-codec-1.11-javadoc.jar>central=
+commons-codec-1.11-sources.jar>central=
 commons-codec-1.11.jar>central=
 commons-codec-1.11.pom>central=

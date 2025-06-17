@@ -1,14 +1,14 @@
 package tests;
 
 
-import base.BaseTest;
+import base.TestBase;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pages.DashboardPage;
 import pages.LoginPage;
 
-public class LoginTest extends BaseTest {
+public class LoginTest extends TestBase {
     private LoginPage loginPage;
     private DashboardPage dashboardPage;
 
