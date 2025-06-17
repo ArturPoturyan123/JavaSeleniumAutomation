@@ -16,8 +16,10 @@ public class LoginTest extends BaseTest {
     @BeforeMethod
     public void initPage() {
 
+
         loginPage = new LoginPage();
         dashboardPage = new DashboardPage();
+
 
     }
 
@@ -27,6 +29,7 @@ public class LoginTest extends BaseTest {
         loginPage.enterPassword("123456");
         loginPage.clickSubmit();
         Assert.assertTrue(dashboardPage.isAllAccountVisible(), "All Accounts text does not match!");
+
 
 
     }
