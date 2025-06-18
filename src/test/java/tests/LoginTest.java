@@ -13,17 +13,17 @@ public class LoginTest extends TestBase {
     private DashboardPage dashboardPage;
 
 
-    @BeforeMethod
+    @BeforeMethod(alwaysRun = true)
     public void initPage() {
 
 
-        loginPage = new LoginPage();
-        dashboardPage = new DashboardPage();
+        loginPage = new LoginPage(driver);
+        dashboardPage = new DashboardPage(driver);
 
 
     }
 
-    @Test
+    @Test(groups = {"smokeTest"})
     public void validLoginTest() {
         loginPage.enterEmail("arthurp@doublecoconut.com");
         loginPage.enterPassword("123456");

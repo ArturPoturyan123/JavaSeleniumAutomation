@@ -9,14 +9,14 @@ import utils.DriverManager;
 public class TestBase {
     protected WebDriver driver;
 
-    @BeforeMethod
+    @BeforeMethod (alwaysRun = true)
     public void setUp() {
         DriverManager.initDriver();
         driver = DriverManager.getDriver();
         driver.get(ConfigReader.get("baseUrl"));
     }
 
-    @AfterMethod
+    @AfterMethod (alwaysRun = true)
     public void tearDown() {
         DriverManager.quitDriver();
     }
