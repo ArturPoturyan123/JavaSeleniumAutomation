@@ -5,6 +5,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+import java.io.IOException;
+
 public class DriverManager {
     private static WebDriver driver;
 
@@ -28,6 +30,7 @@ public class DriverManager {
 
         driver.manage().window().maximize();
     }
+
 
     public static WebDriver getDriver() {
         if (driver == null) {

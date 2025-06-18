@@ -31,6 +31,5 @@ public class LoginTest extends TestBase {
         Assert.assertTrue(dashboardPage.isAllAccountVisible(), "All Accounts text does not match!");
 
 
-
     }
 }
